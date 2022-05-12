@@ -9,19 +9,14 @@
 body{
   background-color: #56192b;
 }
-p,h1,h2,h3,a,th,td,label,li{
+p,h1,h2,h3,h4,h5,a,th,td,label,li{
   color: #fff0d7;
 }
 
-#tablaCoctel td,
-th {
+table td,th {
   text-align: center;
   border: 1px solid #5ec294;
   border-spacing: 0px;
   width: 20%;
-}
-#tablaCoctel {
-  margin-left: auto;
-  margin-right: auto;
 }
 
