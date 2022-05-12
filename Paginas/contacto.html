@@ -16,52 +16,92 @@
   <title>Contacto</title>
 </head>
 <!--Pendientes
-  - agregar bs5 inputs
+  - agregar bs5 inputs radio y check box
   - agregar imagen
   - agregar row
 -->
 
 <body>
-  <h2>Complete los datos</h2>
-  <form action="">
-    <p>Datos de Contacto</p>
-    <label for="Nombre">Nombre :</label>
-    <input type="text" name="Nombre" id="Nombre" required /><br />
-    <label for="Apellido"> Apellido :</label>
-    <input type="text" name="Apellido" id="Apellido" required /><br />
-    <label for="">Email :</label>
-    <input type="email" name="" id="mail" required /><br />
-    <label for="bDate">Fecha de nacimiento</label>
-    <input type="date" name="bDate" id="bDate" required />
-    <p>Direccion</p>
-    <label for="Calle">Calle:</label>
-    <input type="text" name="Calle" id="Calle" required /><br />
-    <label for="Numero">Numero:</label>
-    <input type="number" name="Numero" id="Numero" required /><br />
-    <label for="Comuna">Comuna:</label>
-    <input type="text" name="Comuna" id="Comuna" required /><br />
-    <label for="Region">Region:</label>
-    <input type="text" name="Region" id="Region" required /><br />
-    <p>Seleccione su Genero</p>
-    <input type="radio" id="Masculino" name="Genero" value="Masculino" />
-    <label for="Masculino">Masculino</label>
-    <input type="radio" id="Femenino" name="Genero" value="Femenino" />
-    <label for="Femenino">Femenino</label>
-    <input type="radio" id="Otro" name="Genero" value="Otro" />
-    <label for="Otro">Otro</label>
-    <br />
-    <input type="checkbox" name="" id="" />
-    <label for="">Deseo recibir correos con anuncios de la pagina</label>
-    <br />
-    <input type="submit" value="Enviar" />
-  </form>
-  <hr />
-  <footer>
-    <img src="../Recursos/Imagenes/LOGOCF.jpg" alt="Problemas al cargar imagen" />
-    <a href="../index.html">Inicio</a>
-    <a href="quieneSomos.html">¿Quienes somos?</a>
-    <a href="#">Contacto y sugerencias</a>
-  </footer>
+  <div class="container">
+    <nav class="navbar navbar-expand-sm">
+      <div class="container-fluid">
+        <img src="/Recursos/Imagenes/BANNERCF.png" alt="Problemas al cargar imagen" width="400" />
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">¿Quienes somos?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contacto.html">Contacto y sugerencias</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h2>Complete los datos</h2>
+
+
+    <form action="">
+      <div class="row">
+        <div class="col-6">
+          <p>Datos de Contacto</p>
+          <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombre"  required />
+          <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Apellido" required />
+          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" required />
+          <input type="number" class="form-control" name="age" id="age" min="18" max="100" placeholder="Edad"
+            required />
+        </div>
+        <div class="col-6">
+          <p>Direccion</p>
+          <input type="text" class="form-control" name="Calle" id="Calle" placeholder="Calle" required />
+          <input type="number" class="form-control" name="Numero" id="Numero" placeholder="Numero" required />
+          <input type="text" class="form-control" name="Comuna" id="Comuna" placeholder="Comuna" required />
+          <input type="text" class="form-control" name="Region" id="Region" placeholder="Region" required />
+        </div>
+        <div">
+          <p>Seleccione su Genero</p>
+          <input type="radio" id="Masculino" name="Genero" value="Masculino" />
+          <label for="Masculino">Masculino</label>
+          <input type="radio" id="Femenino" name="Genero" value="Femenino" />
+          <label for="Femenino">Femenino</label>
+          <input type="radio" id="Otro" name="Genero" value="Otro" />
+          <label for="Otro">Otro</label>
+          <br />
+          <input type="checkbox" name="" id="" />
+          <label for="">Deseo recibir correos con anuncios de la pagina</label>
+          <br />
+          <input type="submit" value="Enviar" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+
+        </div>
+      </div>
+    </form>
+
+
+    <footer>
+      <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+          <img src="/Recursos/Imagenes/BANNERCF.png" alt="Problemas al cargar imagen" width="400" />
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">¿Quienes somos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contacto.html">Contacto y sugerencias</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+  </div>
 </body>
 
 </html>
