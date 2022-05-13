@@ -12,6 +12,7 @@ body{
 
 p,h1,h2,h3,h4,h5,a,th,td,label,li{
   color: #fff0d7;
+  list-style: none;
 }
 
 table td,th {
@@ -19,5 +20,16 @@ table td,th {
   border: 1px solid #5ec294;
   border-spacing: 0px;
   width: 20%;
+}
+
+.card,h5 {
+  background-color: #56192b!important;
+  text-align: center;
+  border-color: #5ec294;
+  
+}
+.form-control {
+border-radius: 1.25rem;
+border: 1px solid #56192b;
 }
 

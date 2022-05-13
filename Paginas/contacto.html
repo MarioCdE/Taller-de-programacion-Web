@@ -40,46 +40,47 @@
       </div>
     </nav>
 
-    <h2>Complete los datos</h2>
-
-
     <form action="">
       <div class="row">
         <div class="col-6">
-          <p>Datos de Contacto</p>
-          <input type="text" class="form-control" name="Nombre" id="Nombre" placeholder="Nombre"  required />
-          <input type="text" class="form-control" name="Apellido" id="Apellido" placeholder="Apellido" required />
-          <input type="email" class="form-control" name="Email" id="email" placeholder="Email" required />
-          <input type="number" class="form-control" name="age" id="age" min="18" max="100" placeholder="Edad"
+          <h5>Datos de Contacto</h5>
+          <input type="text" class="form-control mb-4" name="Nombre" id="Nombre" placeholder="Nombre" required />
+          <input type="text" class="form-control mb-4" name="Apellido" id="Apellido" placeholder="Apellido" required />
+          <input type="email" class="form-control mb-4" name="Email" id="email" placeholder="Email" required />
+          <input type="number" class="form-control mb-4" name="age" id="age" min="18" max="100" placeholder="Edad"
             required />
         </div>
         <div class="col-6">
-          <p>Direccion</p>
-          <input type="text" class="form-control" name="Calle" id="Calle" placeholder="Calle" required />
-          <input type="number" class="form-control" name="Numero" id="Numero" placeholder="Numero" required />
-          <input type="text" class="form-control" name="Comuna" id="Comuna" placeholder="Comuna" required />
-          <input type="text" class="form-control" name="Region" id="Region" placeholder="Region" required />
-        </div>
-        <div">
-          <p>Seleccione su Genero</p>
-          <input type="radio" id="Masculino" name="Genero" value="Masculino" />
-          <label for="Masculino">Masculino</label>
-          <input type="radio" id="Femenino" name="Genero" value="Femenino" />
-          <label for="Femenino">Femenino</label>
-          <input type="radio" id="Otro" name="Genero" value="Otro" />
-          <label for="Otro">Otro</label>
-          <br />
-          <input type="checkbox" name="" id="" />
-          <label for="">Deseo recibir correos con anuncios de la pagina</label>
-          <br />
-          <input type="submit" value="Enviar" />
+          <h5>Direccion</h5>
+          <input type="text" class="form-control mb-4" name="Calle" id="Calle" placeholder="Calle" required />
+          <input type="number" class="form-control mb-4" name="Numero" id="Numero" placeholder="Numero" required />
+          <input type="text" class="form-control mb-4" name="Comuna" id="Comuna" placeholder="Comuna" required />
+          <input type="text" class="form-control mb-4" name="Region" id="Region" placeholder="Region" required />
         </div>
       </div>
       <div class="row">
-        <div class="col-12">
+        <div class="col-6">
+          <div class="dropdown">
+            <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+              Seleccione su Genero
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Masculino</a></li>
+              <li><a class="dropdown-item" href="#">Femenino</a></li>
+              <li><a class="dropdown-item" href="#">Otro</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="" name="">
+            <label class="form-check-label">Deseo recibir correos con anuncios de la pagina</label>
 
+          </div>
+          <input class="mt-4" type="submit" value="Enviar" />
         </div>
       </div>
+
     </form>
 
 
