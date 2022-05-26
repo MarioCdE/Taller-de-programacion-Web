@@ -44,18 +44,18 @@
       <div class="row">
         <div class="col-6">
           <h5>Datos de Contacto</h5>
-          <input type="text" class="form-control mb-4" name="Nombre" id="Nombre" placeholder="Nombre" required />
-          <input type="text" class="form-control mb-4" name="Apellido" id="Apellido" placeholder="Apellido" required />
+          <input type="text" class="form-control mb-4" name="Nombre" id="nombre" placeholder="Nombre" required />
+          <input type="text" class="form-control mb-4" name="Apellido" id="apellido" placeholder="Apellido" required />
           <input type="email" class="form-control mb-4" name="Email" id="email" placeholder="Email" required />
-          <input type="number" class="form-control mb-4" name="age" id="age" min="18" max="100" placeholder="Edad"
+          <input type="number" class="form-control mb-4" name="age" id="edad" min="18" max="100" placeholder="Edad"
             required />
         </div>
         <div class="col-6">
           <h5>Direccion</h5>
-          <input type="text" class="form-control mb-4" name="Calle" id="Calle" placeholder="Calle" required />
-          <input type="number" class="form-control mb-4" name="Numero" id="Numero" placeholder="Numero" required />
-          <input type="text" class="form-control mb-4" name="Comuna" id="Comuna" placeholder="Comuna" required />
-          <input type="text" class="form-control mb-4" name="Region" id="Region" placeholder="Region" required />
+          <input type="text" class="form-control mb-4" name="Calle" id="calle" placeholder="Calle" required />
+          <input type="number" class="form-control mb-4" name="Numero" id="numero" placeholder="Numero" required />
+          <input type="text" class="form-control mb-4" name="Comuna" id="comuna" placeholder="Comuna" required />
+          <input type="text" class="form-control mb-4" name="Region" id="region" placeholder="Region" required />
         </div>
       </div>
       <div class="row">
@@ -79,7 +79,7 @@
             <label class="form-check-label">Deseo recibir correos con anuncios de la pagina</label>
 
           </div>
-          <input class="mt-4" type="submit" value="Enviar" />
+          <button class="btn btn-secondary" type="button" onclick="validarDatos()">Enviar</button>
         </div>
       </div>
 
@@ -106,5 +106,19 @@
     </footer>
   </div>
 </body>
+<script>
+  function validarDatos(){
+    nombre = document.getElementById("nombre").value 
+    apellido = document.getElementById("apellido").value
+    email = document.getElementById("email").value
+    edad = document.getElementById("edad").value
+    calle = document.getElementById("calle").value 
+    numero = document.getElementById("numero").value 
+    comuna = document.getElementById("comuna").value 
+    region = document.getElementById("region").value 
+    mensaje = "Nombre:"+ nombre + "Apellido:"+ apellido + "Email:"+ email +"Edad:"+ edad + "Calle:" + calle + "Numero:" + numero + "Comuna:" + comuna + "Region:" + region
+    console.log(mensaje)
+  }
+</script>
 
 </html>
