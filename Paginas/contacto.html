@@ -41,11 +41,13 @@
         <div class="col-6">
           <h5>Datos de Contacto</h5>
           <input type="text" class="form-control mb-4" name="Nombre" id="nombre" placeholder="Nombre" required />
-          <p class="text-danger" style="display:none" id="errorNombre">El largo del nombre debe ser superior a 3 </p>
+          <p class="text-warning" style="display:none" id="errorNombre">El largo del nombre debe ser superior a 3 </p>
           <input type="text" class="form-control mb-4" name="Apellido" id="apellido" placeholder="Apellido" required />
+          <p class="text-warning" style="display:none" id="errorApellido">Favor ingresar apellido </p>
           <input type="email" class="form-control mb-4" name="Email" id="email" placeholder="Email" required />
+          <p class="text-warning" style="display:none" id="errorEmail">Ingresar un mail valido </p>
           <input type="number" class="form-control mb-4" name="age" id="edad" placeholder="Edad" required />
-          <p class="text-danger" style="display:none" id="errorEdad">No cumple con la edad minima</p>
+          <p class="text-warning" style="display:none" id="errorEdad">Debes ser mayor de 18 años para poder suscribirte</p>
         </div>
         <div class="col-6">
           <h5>Direccion</h5>
