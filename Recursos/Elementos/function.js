@@ -32,3 +32,28 @@ function validarDatos() {
         document.getElementById("errorEmail").style.display = "block"
     }
 }
+function obtenerDatos() {
+    $.ajax('https://62aa6be43b31438554472332.mockapi.io/cocktails', {
+        type: 'GET',  // http method
+        success: function (data, status, xhr) {
+            for (var indice = 0; indice < data.length; indice++) {
+                var coctel = data[indice].coctel
+                var ingredientes = data[indice].ingredientes
+                var dificultad = data[indice].dificultad
+                var precio = data[indice].precio
+                var filaTAbla = '<tr>'
+                                + '<td class="prc-25">'+coctel+'</td>'
+                                +  '<td class="prc-25">'+ingredientes+'</td>'
+                                +   '<td class="prc-25">'+dificultad+'</td>'
+                                +   '<td class="prc-25">'+precio+' CLP'+'</td>'
+                                '</tr>'
+                console.log(filaTAbla)
+                $("#tabla-cocteles").append(filaTAbla)
+
+            }
+        },
+        error: function (jqXhr, textStatus, errorMessage) {
+            alert("No me pude conectar a la api: error"+errorMessage+" estado:"+textStatus  )
+        }
+    });
+}

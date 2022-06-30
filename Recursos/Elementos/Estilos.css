@@ -21,7 +21,7 @@ table td,th {
   width: 20%;
 }
 
-.card,h5 {
+.card,h5,th {
   background-color: #56192b!important;
   text-align: center;
   border-color: #5ec294;
