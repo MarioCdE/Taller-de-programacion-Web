@@ -6,18 +6,16 @@ function obtenerDatos() {
         type: 'GET',  // http method
         success: function (data) {
             for (var indice = 0; indice < data.length; indice++) {
-                var id = data[indice].id
                 var coctel = data[indice].coctel
                 var ingredientes = data[indice].ingredientes
                 var precio = data[indice].precio
-                var filaTAbla = '<tr>'
-                    + '<td class="prc-25">' + id + '</td>'
-                    + '<td class="prc-25">' + coctel + '</td>'
-                    + '<td class="prc-25">' + ingredientes + '</td>'
-                    + '<td class="prc-25">' + precio + ' CLP' + '</td>'
+                var filaTablaC = '<tr>'
+                    + '<td>' + coctel + '</td>'
+                    + '<td>' + ingredientes + '</td>'
+                    + '<td>' + precio + ' CLP' + '</td>'
                 '</tr>'
-                console.log(filaTAbla)
-                $("#tabla-cocteles").append(filaTAbla)
+                console.log(filaTablaC)
+                $("#tabla-cocteles").append(filaTablaC)
             }
         },
         error: function (textStatus, errorMessage) {
