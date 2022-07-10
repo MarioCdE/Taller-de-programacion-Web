@@ -1,5 +1,10 @@
 $(document).ready(function () {
     obtenerDatos();
+    
+});
+$(document).ready(function () {
+    llamarMensaje();
+    
 });
 function obtenerDatos() {
     $.ajax('https://62aa6be43b31438554472332.mockapi.io/cocktails', {
