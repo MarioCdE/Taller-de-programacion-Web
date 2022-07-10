@@ -56,3 +56,36 @@ function validarDatos() {
         document.getElementById("errorEmail").style.display = "block"
     }
 }
+function llamarMensaje() {
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Deseas ir a la pagina de contacto?',
+        text: "En caso de no querer realizar la accion presionar cancelar!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, redirigeme!',
+        cancelButtonText: 'No, Cancelar!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            var url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            $(location).attr('href', url);
+        } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+            )
+        }
+    })
+}
