@@ -74,7 +74,6 @@ function validarDatos() {
         return false
     }
 }
-//Profe ¿como puedo hacer obligatorio que se elija una opcion en JS?
 function mayorEdad() {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
