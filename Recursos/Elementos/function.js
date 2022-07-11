@@ -1,6 +1,5 @@
 $(document).ready(function () {
     obtenerDatos();
-    
 });
 function obtenerDatos() {
     $.ajax('https://62aa6be43b31438554472332.mockapi.io/cocktails', {
@@ -34,20 +33,26 @@ function validarDatos() {
     comuna = document.getElementById("comuna").value
     region = document.getElementById("region").value
     mensaje = "Nombre:" + nombre + "Apellido:" + apellido + "Email:" + email + "Edad:" + edad + "Calle:" + calle + "Numero:" + numero + "Comuna:" + comuna + "Region:" + region
-
-
+    errores = 0
+    msjError = ""
     if (nombre.length < 3) {
         document.getElementById("errorNombre").style.display = "block"
+        errores++
+        msjError = msjError + " largo del nombre debe ser mayor a 3 /"
     } else {
         document.getElementById("errorNombre").style.display = "none"
     }
     if (apellido.length < 3) {
         document.getElementById("errorApellido").style.display = "block"
+        errores++
+        msjError = msjError + " largo del apellido debe ser mayor a 3 /"
     } else {
         document.getElementById("errorApellido").style.display = "none"
     }
     if (edad < 18) {
         document.getElementById("errorEdad").style.display = "block"
+        errores++
+        msjError = msjError + " debes ser mayor de 18 años /"
     } else {
         document.getElementById("errorEdad").style.display = "none"
     }
@@ -55,9 +60,21 @@ function validarDatos() {
         document.getElementById("errorEmail").style.display = "none"
     } else {
         document.getElementById("errorEmail").style.display = "block"
+        errores++
+        msjError = msjError + " ingresar un mail valido /"
+    }
+    if (errores > 0) {
+        document.getElementById("box-send").append("Uno de los campos es invalido")
+        Swal.fire({
+            icon: 'error',
+            title: 'Favor completar campos correctamente ' + '\nErrores: ' + errores,
+            text: msjError,
+
+        })
+        return false
     }
 }
-function llamarMensaje() {
+function mayorEdad() {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
             confirmButton: 'btn btn-success',
@@ -67,26 +84,25 @@ function llamarMensaje() {
     })
 
     swalWithBootstrapButtons.fire({
-        title: 'Deseas ir a la pagina de contacto?',
-        text: "En caso de no querer realizar la accion presionar cancelar!",
-        icon: 'warning',
+        title: 'Eres mayor de edad?',
+        text: "si no lo eres preparate para las consecuencias!",
+        imageUrl: 'https://www.recreoviral.com/wp-content/uploads/2015/05/Gatos-que-se-sientas-chistosos-7.jpg',
+        imageWidth: 400,
+        imageHeight: 400,
+        imageAlt: 'Gato juzgandote',
         showCancelButton: true,
-        confirmButtonText: 'Si, redirigeme!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Si soy mayor de edad',
+        cancelButtonText: 'No soy mayor de edad',
         reverseButtons: true
-    }).then((result) => {
-        if (result.isConfirmed) {
-            var url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-            $(location).attr('href', url);
-        } else if (
-            /* Read more about handling dismissals below */
-            result.dismiss === Swal.DismissReason.cancel
-        ) {
-            swalWithBootstrapButtons.fire(
-                'Cancelled',
-                'Your imaginary file is safe :)',
-                'error'
-            )
-        }
     })
+        .then((result) => {
+            if (result.isConfirmed) {
+
+            } else if (
+                result.dismiss === Swal.DismissReason.cancel
+            ) {
+                var url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                $(location).attr('href', url);
+            }
+        })
 }

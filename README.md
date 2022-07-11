@@ -2,7 +2,7 @@
 
 <!-- Por hacer 
     - Completar paginas de cocteles pendientes
-    - Agregar una columna mas a la API de cocteles para comprar
+    - hacer el modal obligatorio
     
 -->
 
