@@ -82,27 +82,35 @@ function mayorEdad() {
         },
         buttonsStyling: false
     })
-
     swalWithBootstrapButtons.fire({
         title: 'Eres mayor de edad?',
-        text: "si no lo eres preparate para las consecuencias!",
+        text: "Si eres menor seras dirigido a la pagina de inicio",
         imageUrl: 'https://www.recreoviral.com/wp-content/uploads/2015/05/Gatos-que-se-sientas-chistosos-7.jpg',
-        imageWidth: 400,
-        imageHeight: 400,
-        imageAlt: 'Gato juzgandote',
+        imageWidth: 300,
+        imageHeight: 300,
+        imageAlt: 'Gato',
         showCancelButton: true,
-        confirmButtonText: 'Si soy mayor de edad',
-        cancelButtonText: 'No soy mayor de edad',
+        confirmButtonText: 'Soy mayor de 18 años',
+        cancelButtonText: 'Soy menor de 18 años',
         reverseButtons: true
     })
         .then((result) => {
             if (result.isConfirmed) {
-
+                swalWithBootstrapButtons.fire(
+                    'Bienvenido al carrito!',
+                    'Puedes continuar comprando',
+                    'success'
+                )
             } else if (
                 result.dismiss === Swal.DismissReason.cancel
             ) {
-                var url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                var url = "../index.html"
                 $(location).attr('href', url);
             }
+
+
+
         })
 }
+
+
